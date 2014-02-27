@@ -3,6 +3,7 @@ package example.service;
 import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.AbstractScheduledService;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
+import com.google.inject.Singleton;
 import com.yammer.metrics.Metrics;
 import com.yammer.metrics.core.Counter;
 import com.yammer.metrics.core.Timer;
@@ -20,6 +21,7 @@ import static com.google.common.util.concurrent.Uninterruptibles.sleepUninterrup
  * Simple scheduled service, that on each iteration updates some metrics
  * that can be later accessed via JMX.
  */
+@Singleton
 public final class DefaultTestService extends AbstractScheduledService implements TestService {
 
     private static final Logger LOG = LoggerFactory.getLogger(DefaultTestService.class);

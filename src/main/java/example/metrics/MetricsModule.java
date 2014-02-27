@@ -8,7 +8,7 @@ import com.yammer.metrics.core.MetricsRegistry;
 import javax.annotation.concurrent.Immutable;
 
 /**
- * Guice module for binding codahale metric stuff.
+ * Guice module for binding codahale metrics stuff.
  */
 @Immutable
 public final class MetricsModule extends AbstractModule {
